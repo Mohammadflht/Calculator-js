@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="caculator">
+            <form>
+                <div class="display">
+                    <input id="display" type="text" disabled>
+                </div>
+                <div>
+                    <input class="setColor" type="button" value="AC" onclick="showAllClear()" >
+                    <input class="setColor" type="button" value="DE" onclick="showDelete()">
+                    <input class="setColor" type="button" value="." onclick="showDotted()">
+                    <input class="setColor" type="button" value="&divide;" onclick="showDivide()">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="showNumber7()">
+                    <input type="button" value="8" onclick="showNumber8()">
+                    <input type="button" value="9" onclick="showNumber9()">
+                    <input class="setColor" type="button" value= "&times"; onclick="showTimes()">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="showNumber4()">
+                    <input type="button" value="5" onclick="showNumber5()">
+                    <input type="button" value="6" onclick="showNumber6()">
+                    <input class="setColor" type="button" value="-" onclick="showMinus()">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="showNumber1()">
+                    <input type="button" value="2" onclick="showNumber2()">
+                    <input type="button" value="3" onclick="showNumber3()">
+                    <input class="setColor" type="button" value="+" onclick="showPlus()">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="showNumber00()">
+                    <input type="button" value="0"  onclick="showNumber0()">
+                    <input type="button" value="=" class="equal" onclick="showEqual()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
