@@ -1,36 +1,73 @@
 const result = document.getElementById("display");
 
+
 function showNumber1(){
-    return result.value += '1';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 1;
+    else return result.value += '1';
 }
 function showNumber2(){
-    return result.value += '2';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 2;
+    else return result.value += '2';
 }
 function showNumber3(){
-    return result.value += '3';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 3;
+    else return result.value += '3';
 }
 function showNumber4(){
-    return result.value += '4';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 4;
+    else return result.value += '4';
 }
 function showNumber5(){
-    return result.value += '5';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 5;
+    else return result.value += '5';
 }
 function showNumber6(){
-    return result.value += '6';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 6;
+    else return result.value += '6';
 }
 function showNumber7(){
-    return result.value += '7';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 7;
+    else return result.value += '7';
 }
 function showNumber8(){
-    return result.value += '8';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 8;
+    else return result.value += '8';
 }
 function showNumber9(){
-    return result.value += '9';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 9;
+
+    else return result.value += '9';
 }
 function showNumber0(){
-    return result.value += '0';
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return;
+    else return result.value += 0;
 }
 function showNumber00(){
+    result.value = result.value.toString();
+
+    if(result.value.length === 1 && result.value.includes('0')) return;
+
+    if (result.value.length === 0) return;
     return result.value += '00';
 }
 function showDotted(){
@@ -43,7 +80,6 @@ function showDotted(){
      (result.value.at(-1) === '-')||
      (result.value.at(-1) === '+')) 
      result.value += 0;
-     
      
      return result.value += '.';
 }
