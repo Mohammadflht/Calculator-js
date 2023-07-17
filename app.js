@@ -97,6 +97,5 @@ document.querySelector("#Subtraction").addEventListener("click", () => {
 });
 document.querySelector("#Equal").addEventListener("click", () => {
     if(result.value.length === 0) return;
-
     else return result.value = eval(result.value);
 });
