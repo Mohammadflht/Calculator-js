@@ -1,79 +1,17 @@
 const result = document.getElementById("display");
 result.value = result.value.toString();
 
-
-function showNumber1(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 1;
-    else return result.value += '1';
-}
-function showNumber2(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 2;
-    else return result.value += '2';
-}
-function showNumber3(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 3;
-    else return result.value += '3';
-}
-function showNumber4(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 4;
-    else return result.value += '4';
-}
-function showNumber5(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 5;
-    else return result.value += '5';
-}
-function showNumber6(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 6;
-    else return result.value += '6';
-}
-function showNumber7(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 7;
-    else return result.value += '7';
-}
-function showNumber8(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 8;
-    else return result.value += '8';
-}
-function showNumber9(){
-    if(result.value.length === 1 && result.value.includes('0')) return result.value = 9;
-
-    else return result.value += '9';
-}
-function showNumber0(){
-    if(result.value.length === 1 && result.value.includes('0')) return;
-    else return result.value += 0;
-}
-function showNumber00(){
-    if(result.value.length === 1 && result.value.includes('0')) return;
-
-    if (result.value.length === 0) return;
-    return result.value += '00';
-}
-function showDotted(){
+document.querySelector("#AC").addEventListener("click", () => result.value = '');
+document.querySelector("#DE").addEventListener("click", () => result.value = result.value.slice(0, -1));
+document.querySelector("#Dot").addEventListener("click", () => {
     if(result.value.at(-1) === '.') return;
-
     if(
-     (result.value.length === 0)||
-     (result.value.at(-1) === '*')||
-     (result.value.at(-1) === '/')||
-     (result.value.at(-1) === '-')||
+     (result.value.length === 0)||(result.value.at(-1) === '*')||
+     (result.value.at(-1) === '/')||(result.value.at(-1) === '-')||
      (result.value.at(-1) === '+')) 
-     result.value += 0;
-     
-     return result.value += '.';
-}
-
-function showTimes(){
-    if(result.value.at(-1) === '*' || result.value.length === 0)
-    return;
-    else if(
-        result.value.at(-1) === '/' ||
-        result.value.at(-1) === '-' ||
-        result.value.at(-1) === '+') return;
-    else
-    return result.value += '*';
-}
-function showDivide(){
+     result.value += 0; return result.value += '.';
+});
+document.querySelector("#Division").addEventListener("click", () => {
     if(result.value.at(-1) === '/' || result.value.length === 0)
     return;
     else if(
@@ -82,8 +20,62 @@ function showDivide(){
         result.value.at(-1) === '+') return;
     else
     return result.value += '/';
-}
-function showPlus(){
+});
+document.querySelector("#Number9").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 9;
+    else return result.value += '9';
+});
+document.querySelector("#Number8").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 8;
+    else return result.value += '8';
+});
+document.querySelector("#Number7").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 7;
+    else return result.value += '7';
+});
+document.querySelector("#Number6").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 6;
+    else return result.value += '6';
+});
+document.querySelector("#Number5").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 5;
+    else return result.value += '5';
+});
+document.querySelector("#Number4").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 4;
+    else return result.value += '4';
+});
+document.querySelector("#Number3").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 3;
+    else return result.value += '3';
+});
+document.querySelector("#Number2").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 2;
+    else return result.value += '2';
+});
+document.querySelector("#Number1").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return result.value = 1;
+    else return result.value += '1';
+});
+document.querySelector("#Number0").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return;
+    else return result.value += 0;
+});
+document.querySelector("#Number00").addEventListener("click", () => {
+    if(result.value.length === 1 && result.value.includes('0')) return;
+    if (result.value.length === 0) return;
+    return result.value += '00';
+});
+document.querySelector("#Multiplication").addEventListener("click", () => {
+    if(result.value.at(-1) === '*' || result.value.length === 0) return;
+    else if(
+        result.value.at(-1) === '/' ||
+        result.value.at(-1) === '-' ||
+        result.value.at(-1) === '+') return;
+    else
+    return result.value += '*';
+});
+document.querySelector("#Addition").addEventListener("click", () => {
     if(result.value.at(-1) === '+' || result.value.length === 0)
     return;
     if(
@@ -92,8 +84,8 @@ function showPlus(){
         result.value.at(-1) === '/') return;
     else
     return result.value += '+';
-}
-function showMinus(){
+});
+document.querySelector("#Subtraction").addEventListener("click", () => {
     if(result.value.at(-1) === '-' || result.value.length === 0)
     return;
     if(
@@ -102,16 +94,9 @@ function showMinus(){
         result.value.at(-1) === '+') return;
     else
     return result.value += '-';
-}
-function showAllClear(){
-    return result.value = '';
-}
-function showDelete(){
-    return result.value = result.value.slice(0, -1);
-}
-function showEqual(){
+});
+document.querySelector("#Equal").addEventListener("click", () => {
     if(result.value.length === 0) return;
 
     else return result.value = eval(result.value);
-
-}
+});

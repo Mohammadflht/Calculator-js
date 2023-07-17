@@ -7,40 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div id="container" class="container">
         <div class="caculator">
             <form>
                 <div class="display">
                     <input id="display" type="text" disabled>
                 </div>
                 <div>
-                    <input class="setColor" type="button" value="AC" onclick="showAllClear()" >
-                    <input class="setColor" type="button" value="DE" onclick="showDelete()">
-                    <input class="setColor" type="button" value="." onclick="showDotted()">
-                    <input class="setColor" type="button" value="&divide;" onclick="showDivide()">
+                    <input id="AC" class="setColor" type="button" value="AC">
+                    <input id="DE" class="setColor" type="button" value="DE">
+                    <input id="Dot" class="setColor" type="button" value=".">
+                    <input id="Division" class="setColor" type="button" value="&divide">
                 </div>
                 <div>
-                    <input type="button" value="7" onclick="showNumber7()">
-                    <input type="button" value="8" onclick="showNumber8()">
-                    <input type="button" value="9" onclick="showNumber9()">
-                    <input class="setColor" type="button" value= "&times"; onclick="showTimes()">
+                    <input id="Number7" type="button" value="7">
+                    <input id="Number8" type="button" value="8">
+                    <input id="Number9" type="button" value="9">
+                    <input id="Multiplication" class="setColor" type="button" value= "&times">
                 </div>
                 <div>
-                    <input type="button" value="4" onclick="showNumber4()">
-                    <input type="button" value="5" onclick="showNumber5()">
-                    <input type="button" value="6" onclick="showNumber6()">
-                    <input class="setColor" type="button" value="-" onclick="showMinus()">
+                    <input id="Number4" type="button" value="4">
+                    <input id="Number5" type="button" value="5">
+                    <input id="Number6" type="button" value="6">
+                    <input id="Subtraction" class="setColor" type="button" value="-">
                 </div>
                 <div>
-                    <input type="button" value="1" onclick="showNumber1()">
-                    <input type="button" value="2" onclick="showNumber2()">
-                    <input type="button" value="3" onclick="showNumber3()">
-                    <input class="setColor" type="button" value="+" onclick="showPlus()">
+                    <input id="Number1" type="button" value="1">
+                    <input id="Number2" type="button" value="2">
+                    <input id="Number3" type="button" value="3">
+                    <input id="Addition" class="setColor" type="button" value="+">
                 </div>
                 <div>
-                    <input type="button" value="00" onclick="showNumber00()">
-                    <input type="button" value="0"  onclick="showNumber0()">
-                    <input type="button" value="=" class="equal" onclick="showEqual()">
+                    <input id="Number00" type="button" value="00">
+                    <input id="Number0" type="button" value="0">
+                    <input id="Equal" type="button" value="=" class="equal">
                 </div>
             </form>
         </div>
