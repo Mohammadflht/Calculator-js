@@ -38,15 +38,29 @@
 form .display {
     display: flex;
     justify-content: flex-end;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
 }
-form .display input,form .display input:active {
+form .top-display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 0;
+}
+#display , #display:active {
     text-align: right;
     flex: 1;
     font-size: 45px;
     box-shadow: none;
     cursor: default;
     border-bottom: 1px solid #F7E6C4;
+    border-radius: 0;
+    color: #F7E6C4;
+}
+#top-display {
+    text-align: right;
+    flex: 1;
+    font-size: 30px;
+    box-shadow: none;
+    cursor: default;
     border-radius: 0;
     color: #F7E6C4;
 }
@@ -59,6 +73,3 @@ form input.equal {
 form input.setColor {
     color: #4BC6B9;
 }
-
-
-

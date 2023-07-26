@@ -1,14 +1,22 @@
 const result = document.getElementById("display");
 result.value = result.value.toString();
 
-document.querySelector("#AC").addEventListener("click", () => result.value = '');
-document.querySelector("#DE").addEventListener("click", () => result.value = result.value.slice(0, -1));
+let historyValue = document.querySelector("#top-display");
+
+document.querySelector("#AC").addEventListener("click", () => {
+    result.value = ""
+    historyValue.value = "";
+});
+document.querySelector("#DE").addEventListener("click", () => {
+    result.value = result.value.slice(0, -1);
+    historyValue.value = "";
+});
 document.querySelector("#Dot").addEventListener("click", () => {
     if(result.value.at(-1) === '.') return;
     if(
      (result.value.length === 0)||(result.value.at(-1) === '*')||
      (result.value.at(-1) === '/')||(result.value.at(-1) === '-')||
-     (result.value.at(-1) === '+')) 
+     (result.value.at(-1) === '+'))
      result.value += 0; return result.value += '.';
 });
 document.querySelector("#Division").addEventListener("click", () => {
@@ -97,5 +105,6 @@ document.querySelector("#Subtraction").addEventListener("click", () => {
 });
 document.querySelector("#Equal").addEventListener("click", () => {
     if(result.value.length === 0) return;
-    else return result.value = eval(result.value);
+    else historyValue.value = result.value;
+    result.value = eval(result.value);
 });
