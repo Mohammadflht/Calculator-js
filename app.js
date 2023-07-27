@@ -2,14 +2,18 @@ const result = document.getElementById("display");
 result.value = result.value.toString();
 
 let historyValue = document.querySelector("#top-display");
+historyValue.value = historyValue.value.toString();
 
 document.querySelector("#AC").addEventListener("click", () => {
     result.value = ""
     historyValue.value = "";
+    historyValue.style.backgroundColor="transparent";
+
 });
 document.querySelector("#DE").addEventListener("click", () => {
     result.value = result.value.slice(0, -1);
     historyValue.value = "";
+    historyValue.style.backgroundColor="transparent";
 });
 document.querySelector("#Dot").addEventListener("click", () => {
     if(result.value.at(-1) === '.') return;
@@ -107,4 +111,8 @@ document.querySelector("#Equal").addEventListener("click", () => {
     if(result.value.length === 0) return;
     else historyValue.value = result.value;
     result.value = eval(result.value);
+    historyValue.style.backgroundColor="rgb(113, 127, 110)";
 });
+
+
+
