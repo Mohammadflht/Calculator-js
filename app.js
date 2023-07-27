@@ -111,7 +111,7 @@ document.querySelector("#Equal").addEventListener("click", () => {
     if(result.value.length === 0) return;
     else historyValue.value = result.value;
     result.value = eval(result.value);
-    historyValue.style.backgroundColor="rgb(113, 127, 110)";
+    historyValue.style.backgroundColor="rgb(103, 114, 100)";
 });
 
 

@@ -64,6 +64,7 @@ form .top-display {
     border-radius: 4px;
     color: #F7E6C4;
     padding: 8px;
+    transition: all 0.3s;
 }
 form input.equal {
     width: 145px;
