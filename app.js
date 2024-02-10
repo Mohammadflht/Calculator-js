@@ -30,7 +30,9 @@ document.querySelector("#Division").addEventListener("click", () => {
         result.value.at(-1) === '*' ||
         result.value.at(-1) === '-' ||
         result.value.at(-1) === '+') return;
-    else
+    else if(result.value.at(-1) === '.') {
+        result.value = result.value.slice(0, -1);
+    }
     return result.value += '/';
 });
 document.querySelector("#Number9").addEventListener("click", () => {
@@ -84,7 +86,9 @@ document.querySelector("#Multiplication").addEventListener("click", () => {
         result.value.at(-1) === '/' ||
         result.value.at(-1) === '-' ||
         result.value.at(-1) === '+') return;
-    else
+    else if(result.value.at(-1) === '.') {
+        result.value = result.value.slice(0, -1);
+    }
     return result.value += '*';
 });
 document.querySelector("#Addition").addEventListener("click", () => {
@@ -94,7 +98,9 @@ document.querySelector("#Addition").addEventListener("click", () => {
         result.value.at(-1) === '*' ||
         result.value.at(-1) === '-' ||
         result.value.at(-1) === '/') return;
-    else
+    else if(result.value.at(-1) === '.') {
+        result.value = result.value.slice(0, -1);
+    }
     return result.value += '+';
 });
 document.querySelector("#Subtraction").addEventListener("click", () => {
@@ -104,7 +110,9 @@ document.querySelector("#Subtraction").addEventListener("click", () => {
         result.value.at(-1) === '*' ||
         result.value.at(-1) === '/' ||
         result.value.at(-1) === '+') return;
-    else
+    else if(result.value.at(-1) === '.') {
+        result.value = result.value.slice(0, -1);
+    }
     return result.value += '-';
 });
 document.querySelector("#Equal").addEventListener("click", () => {
