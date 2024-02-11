@@ -122,5 +122,9 @@ document.querySelector("#Equal").addEventListener("click", () => {
     historyValue.style.backgroundColor="rgb(103, 114, 100)";
 });
 
-
-
+document.addEventListener("keydown", (event) => {
+    if (event.key >= '0' && event.key <= '9') {
+        if (result.value.length === 1 && result.value.includes('0')) return result.value = event.key;
+        else return result.value += event.key;
+    }
+});
